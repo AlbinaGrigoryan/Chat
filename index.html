@@ -28,7 +28,7 @@
         <h3>Форма сообщений</h3>
           <form id="messForm" action="">
             <label for="name">Имя</label>
-            <input type="text" name="name" id="name" class="form-control" placeholder="Введите имя">
+            <input type="text" name="name" id="name" class="form-control" placeholder="Введите имя" autocomplete="off">
 
             <label for="message" class="mt-3">Сообщение</label>
             <textarea name="message" id="message" class="form-control" placeholder="Введите сообщение"></textarea>
@@ -43,7 +43,7 @@
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://albinagrigoryan.github.io/Chat/socket.io/socket.io.js"></script>
   <script>
     var min = 1;
     var max = 6;
@@ -77,7 +77,7 @@
           break;
     }
     $(function() {
-      var socket = io.connect('https://albinagrigoryan.github.io/Chat/');
+      var socket = io.connect();
 
       var $form = $('#messForm');
       var $textarea = $('#message');
